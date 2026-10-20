@@ -56,7 +56,7 @@ h1 {
 #add-task-btn,
 #filter-container > button,
 #clean-btn {
-  height: 4rem;
+  min-height: 4rem;
   border-radius: 1rem;
   border: 1px solid black;
   background: transparent;
