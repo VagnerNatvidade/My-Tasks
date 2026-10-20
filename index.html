@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>My Task</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Minhas tarefas</h1>
+
+      <form>
+        <div id="add-task-container">
+          <input type="text" name="add-task" id="add-task" />
+          <button type="Submit" id="add-task-btn">Adicionar tarefas</button>
+        </div>
+
+        <div id="filter-container">
+          <button id="all">Todas</button>
+          <button id="pending">Pendente</button>
+          <button id="done">Concluída</button>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <div id="done-container">
+          <p id="message"></p>
+          <button id="clean-btn">Limpar concluídas</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

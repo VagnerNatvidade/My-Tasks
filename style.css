@@ -1,0 +1,72 @@
+:root {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 80%;
+  margin-top: 5%;
+  padding: 2rem 2rem 1.2rem 2rem;
+  border-radius: 4rem;
+  background: #c1c1c1;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 3.2rem;
+}
+
+#add-task-container,
+#filter-container,
+#done-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+#add-task {
+  width: 80%;
+}
+
+#add-task-btn {
+  width: 20%;
+  margin-left: 1.2rem;
+}
+#add-task,
+#add-task-btn,
+#filter-container > button,
+#clean-btn {
+  height: 4rem;
+  border-radius: 8rem;
+  border: 1px solid black;
+  background: transparent;
+}
+
+#filter-container {
+  gap: 4rem;
+}
+
+#filter-container > button {
+  width: 100%;
+}
+
+#done-container {
+  align-items: center;
+}
+
+#clean-btn {
+  width: 20%;
+}
