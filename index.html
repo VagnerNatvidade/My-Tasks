@@ -8,28 +8,32 @@
     <title>My Task</title>
   </head>
   <body>
-    <div id="app">
+    <main id="app">
       <h1>Minhas tarefas</h1>
 
-      <form>
-        <div id="add-task-container">
-          <input type="text" name="add-task" id="add-task" />
-          <button type="Submit" id="add-task-btn">Adicionar tarefas</button>
-        </div>
-
-        <div id="filter-container">
-          <button id="all">Todas</button>
-          <button id="pending">Pendente</button>
-          <button id="done">Concluída</button>
-        </div>
-
-        <ul id="task-list"></ul>
-
-        <div id="done-container">
-          <p id="message"></p>
-          <button id="clean-btn">Limpar concluídas</button>
-        </div>
+      <form id="add-task-form">
+        <input
+          type="text"
+          name="add-task"
+          id="add-task"
+          placeholder="Digite a sua tarefa..."
+          aria-label="Digite a sua tarefa..."
+        />
+        <button type="submit" id="add-task-btn">Adicionar tarefas</button>
       </form>
-    </div>
+
+      <div id="filter-container">
+        <button id="all" type="button">Todas</button>
+        <button id="pending" type="button">Pendente</button>
+        <button id="done" type="button">Concluída</button>
+      </div>
+
+      <ul id="task-list"></ul>
+
+      <div id="done-container">
+        <p id="message">0 de 0 tarefas concluídas</p>
+        <button id="clean-btn" type="button">Limpar concluídas</button>
+      </div>
+    </main>
   </body>
 </html>
