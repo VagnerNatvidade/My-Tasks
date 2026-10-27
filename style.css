@@ -21,7 +21,8 @@ body {
   width: min(90%, 100rem);
   padding: 2rem 2rem 1.2rem 2rem;
   border-radius: 2rem;
-  background: #c1c1c1;
+  background: #ffea47;
+  color: #000;
 }
 
 h1 {
@@ -52,14 +53,63 @@ h1 {
   flex: 1;
 }
 
+#filter-container > button.active {
+  background: #fff7b9;
+}
+
 #add-task-input,
 #add-task-btn,
 #filter-container > button,
 #clean-btn {
   min-height: 4rem;
   border-radius: 1rem;
-  border: 1px solid black;
+  border: 1px solid #000;
+  color: #000;
   background: transparent;
+}
+
+#add-task-input {
+  padding: 1.2rem;
+}
+
+#add-task-input::placeholder {
+  color: #000;
+}
+
+#task-list li {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+#task-list li button,
+#task-list li p {
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  color: #000;
+}
+
+#task-list li button {
+  flex: 1;
+  border: 0.1rem solid #000;
+  background: transparent;
+}
+
+#task-list li p {
+  flex: 3;
+  max-width: 100%;
+  background: #fff7b9;
+}
+
+.completed p {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.completed p {
+  opacity: 0.5;
 }
 
 #filter-container > button {
@@ -70,12 +120,14 @@ h1 {
   align-items: center;
 }
 
-#message {
-  flex: 2;
-}
-
 #clean-btn {
   flex: 1;
+}
+
+button:hover {
+  opacity: 0.3;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -91,5 +143,9 @@ h1 {
   #clean-btn {
     flex: none;
     width: 100%;
+  }
+
+  #task-list li {
+    flex-direction: column;
   }
 }

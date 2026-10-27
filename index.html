@@ -23,7 +23,7 @@
       </form>
 
       <div id="filter-container">
-        <button id="all" type="button">Todas</button>
+        <button id="all" type="button" class="active">Todas</button>
         <button id="pending" type="button">Pendente</button>
         <button id="done" type="button">Concluída</button>
       </div>
@@ -31,7 +31,10 @@
       <ul id="task-list"></ul>
 
       <div id="done-container">
-        <p id="message">0 de 0 tarefas concluídas</p>
+        <p>
+          <span id="counter-view">0</span> de
+          <span id="total-task">0</span> tarefas concluídas
+        </p>
         <button id="clean-btn" type="button">Limpar concluídas</button>
       </div>
     </main>
