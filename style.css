@@ -53,10 +53,6 @@ h1 {
   flex: 1;
 }
 
-#filter-container > button.active {
-  background: #fff7b9;
-}
-
 #add-task-input,
 #add-task-btn,
 #filter-container > button,
@@ -66,6 +62,10 @@ h1 {
   border: 1px solid #000;
   color: #000;
   background: transparent;
+}
+
+#filter-container > button.active {
+  background: #fff7b9;
 }
 
 #add-task-input {
@@ -103,7 +103,7 @@ h1 {
   background: #fff7b9;
 }
 
-.completed p {
+#task-list li.completed p {
   color: gray;
   text-decoration: line-through;
 }

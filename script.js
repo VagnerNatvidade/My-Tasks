@@ -6,6 +6,7 @@ const allTasksBtn = document.querySelector("#all");
 const clearCompletedTaskBtn = document.querySelector("#clean-btn");
 const counterView = document.querySelector("#counter-view");
 const totalTask = document.querySelector("#total-task");
+const filterButtons = document.querySelectorAll("#filter-container button");
 
 let activeFilter = "all";
 
@@ -27,38 +28,37 @@ const applyFilter = () => {
     const isCompleted = li.classList.contains("completed");
 
     if (activeFilter === "pending") {
-      pendingBtn.classList.add("active");
-      allTasksBtn.classList.remove("active");
-      doneBtn.classList.remove("active");
-
       if (isCompleted) {
         li.style.display = "none";
       } else {
         li.style.display = "flex";
       }
     } else if (activeFilter === "done") {
-      doneBtn.classList.add("active");
-      allTasksBtn.classList.remove("active");
-      pendingBtn.classList.remove("active");
-
       if (!isCompleted) {
         li.style.display = "none";
       } else {
         li.style.display = "flex";
       }
     } else {
-      allTasksBtn.classList.add("active");
-      doneBtn.classList.remove("active");
-      pendingBtn.classList.remove("active");
-
       li.style.display = "";
     }
   });
 };
 
+const updateActiveButton = () => {
+  filterButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  const selectedButton = document.querySelector(`#${activeFilter}`);
+
+  selectedButton.classList.add("active");
+};
+
 const updateUI = () => {
   updateCounter();
   applyFilter();
+  updateActiveButton();
 };
 
 const registerTaskSubmit = (frm) => {
@@ -124,18 +124,21 @@ allTasksBtn.addEventListener("click", () => {
   activeFilter = "all";
 
   applyFilter();
+  updateActiveButton();
 });
 
 pendingBtn.addEventListener("click", () => {
   activeFilter = "pending";
 
   applyFilter();
+  updateActiveButton();
 });
 
 doneBtn.addEventListener("click", () => {
   activeFilter = "done";
 
   applyFilter();
+  updateActiveButton();
 });
 
 clearCompletedTaskBtn.addEventListener("click", () => {
